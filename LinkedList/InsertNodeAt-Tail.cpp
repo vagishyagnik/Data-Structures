@@ -83,22 +83,24 @@ int main()
     int llist_count;
     cin >> llist_count;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-    for (int i = 0; i < llist_count; i++) {
+    
+    int i=0;
+    while (i < llist_count) {
         int llist_item;
         cin >> llist_item;
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
     
       	SinglyLinkedListNode* llist_head = insertNodeAtTail(llist->head, llist_item);
         llist->head = llist_head;
+        i++;
     }
 
     print_singly_linked_list(llist->head, "\n", fout);
     fout << "\n";
 
     free_singly_linked_list(llist->head);
-
+    
     fout.close();
-
+    //Program done and closed
     return 0;
 }
