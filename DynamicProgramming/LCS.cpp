@@ -9,12 +9,15 @@ vector<int> longestCommonSubsequence(vector<int> a, vector<int> b){
         int n_a = a.size();
         int n_b = b.size();
         int dp[n_b+1][n_a+1];
-
-    for(int k=0;k<=n_b;k++){
+    int k=0;
+    while(k<=n_b){
         dp[k][0]=0;
+        k++;
     }
-    for(int k=0;k<=n_a;k++){
+    k=0;
+    while(k<=n_a){
         dp[0][k]=0;
+        k++;
     }
     for(int i=1;i<=n_b;i++){
         for(int j=1;j<=n_a;j++){
