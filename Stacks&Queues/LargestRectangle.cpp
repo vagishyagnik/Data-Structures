@@ -1,6 +1,5 @@
-#include <iostream>
-#include<vector>
-#include<stack>
+//Use compiled libraries bits
+#include<bits/stdc++.h>
 using namespace std;
 int main() 
 {
