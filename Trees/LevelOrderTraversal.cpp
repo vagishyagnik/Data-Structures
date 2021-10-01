@@ -13,29 +13,25 @@ class Node {
 };
 */
 
-    void levelOrder(Node * root) {
+void levelOrder(Node * root) {
      queue<Node*>q;
      q.push(root);
      q.push(NULL);
-    while(!q.empty())
-    {
-        Node* t = q.front();
+     while(!q.empty()) {
+        Node* n = q.front();
         q.pop();
-      if(t)
-      {
-          std::cout<<t->data<<" ";
-          if(t->left)
-            q.push(t->left);
-          if(t->right)
-            q.push(t->right);
+        if(n) {
+          cout<<n->data<<" ";
+          if(n->left)
+            q.push(n->left);
+          if(n->right)
+            q.push(n->right);
           //q.pop();
       }
-      else
-      {
+      else {
           //std::cout<<" ";
           if(!q.empty())
              q.push(NULL);
       }
     }
-    }
-
+ }
